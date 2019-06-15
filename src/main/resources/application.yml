@@ -1,0 +1,14 @@
+#-------------------------
+# Database MySQL
+#-------------------------
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+  datasource:
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useSSL=false
