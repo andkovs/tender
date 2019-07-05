@@ -11,4 +11,12 @@ spring:
   datasource:
     username: root
     password: password
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://localhost:3306/tender?serverTimezone=UTC&useSSL=false
+  flyway:
+    enabled: true
+    schemas: tender
+    locations: classpath:/db/migration
+    baseline-on-migrate: true
+server:
+  port : 8081
+

@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Bean
 
 @Configuration
 @SpringBootApplication
-class DeduceApplication
+class TenderApplication
 
 fun main(args: Array<String>) {
-    SpringApplication.run(DeduceApplication::class.java, *args)
+    SpringApplication.run(TenderApplication::class.java, *args)
 }
 
 @Bean
