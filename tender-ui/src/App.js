@@ -1,23 +1,20 @@
 import React from 'react';
+import request from 'superagent';
 import logo from './logo.svg';
 import './App.css';
+
+function testRequest() {
+    request('get', '/api/test').send().then(res => {
+        alert(JSON.stringify(res.body))
+    })
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={testRequest}>test controller invoke</button>
       </header>
     </div>
   );
